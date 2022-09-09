@@ -1,10 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 import clsx from "clsx";
 import styles from './App.module.scss';
+import Button from "./Button/Button";
 
 const App = () => {
+
+  const [count, setCount] = useState(0);
+  const handleCount = () => {
+    setCount(count + 1);
+  }
+
+  const handleClickDelete = () => {
+    setCount(0)
+  }
+
   return (
-    <div className={clsx(styles.app)}>This is a react blueprint</div>
+    <div className={clsx(styles.app)}>
+      this is my counter {count}
+      <Button typeCount onClick={() => handleCount()}>Count</Button>
+      <Button typeDelete onClick={() => handleClickDelete()}>Delete</Button>
+    </div>
   )
 }
 
