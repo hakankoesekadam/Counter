@@ -1,7 +1,17 @@
+button {
+  padding: 30px;
+  color: #fff;
+  cursor: pointer;
+  min-width: 350px;
+}
+
 .count {
-  background: green;
+  background-color: #00b894;
+  border: 1px solid #00b894;
+  margin-bottom: 20px;
 }
 
 .delete {
-  background: red;
+  background-color: #d63031;
+  border: 1px solid #d63031;
 }
